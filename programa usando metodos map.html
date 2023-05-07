@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Días de los meses</title>
+</head>
+
+
+<body>
+	<h1>Trabajo práctico:Determinar días que tiene cada mes usando método MAP </h1>
+	<h2>Alumna:María Julia Piassentini</h2>
+<script>
+	
+	let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto","Septiembre", "Octubre", "Noviembre","Diciembre"];
+
+let diasDelMes= [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
+
+
+//MEDIANTE ESTE MÉTODO OBTENGO INDICES DE ELEMENTOS CON VALOR 31 QUE COINCIDEN CON INDICES DEL ARRAY DE MESES
+
+let diasMapeados= diasDelMes.map(function (dias,j){
+
+   		if (diasDelMes[j]==31) {
+   			console.log("indice de elemento con valor 31: " + [j]);
+   		}
+   			return
+});
+
+//MEDIANTE EL SIGUIENTE MÉTODO EVITO HACER CICLO FOR E IGUALMETE SE ITERA SOBRE CADA ELEMENTO	
+ 
+ let mesesMapeados= meses.map( function (mes,index,) {
+	
+	if ( index==0 || index==2 || index==4 || index==6 || index==7 || index==9 || index==11){
+		console.log(meses[index]+" tiene 31 dias" );
+		document.write(meses[index]+" tiene 31 dias <br>");
+	}else{
+		if (index==1){
+			console.log( meses[index]+ " no tiene 30 ni 31 dias");
+			document.write(meses[index]+ " no tiene 30 ni 31 dias <br>");
+		}else{
+			console.log(meses[index]+" tiene 30 dias");
+			document.write(meses[index]+" tiene 30 dias <br>");
+
+		}
+	}
+	return 
+	
+});
+
+ document.write(mesesMapeados[i]);
+
+</script>
+</body>
+</html>
